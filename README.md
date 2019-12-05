@@ -20,6 +20,8 @@
 
 #### 1.[前端模块化规范]()
 
+#### 2.[深入理解跨域及常见解决方法 ](https://github.com/suchenrain/FrontEnd-Roadmap/issues/2)
+
 ### | ES6
 
 ### | CSS
