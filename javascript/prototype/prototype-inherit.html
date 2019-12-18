@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript继承</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * Javascript的继承方式
+         */
+
+        /*
+        |--------------------------------------
+        |  原型链继承
+        |--------------------------------------
+        */
+
+        // //父类
+        // function Person(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.play = [1, 2, 3]
+        //     this.setName = function () {}
+
+        // }
+        // Person.prototype.setAge = function () {}
+
+        // //子类
+        // function Student(grade) {
+        //     this.grade = grade
+        //     this.setScore = function () {}
+        // }
+        // Student.prototype = new Person()
+        // var s1 = new Student(1);
+        // var s2 = new Student(2);
+        // console.log(s1, s2)
+
+        // s1.play.push(4)
+        // s2.__proto__.name = 's2'
+        // console.log(s1, s2)
+        // console.log(s1.__proto__ === s2.__proto__, s1.__proto__.__proto__ === s2.__proto__.__proto__)
+
+        /*
+        |--------------------------------------
+        |  借用构造函数继承
+        |--------------------------------------
+        */
+
+        // function Car(name, price) {
+        //     this.name = name
+        //     this.price = price
+        //     this.go = function () {}
+        // }
+        // Car.prototype.stop = function () {}
+
+        // function Bus(name, price, size) {
+        //     Car.call(this, name, price)
+        //     this.size = size
+        // }
+        // var b1 = new Bus('test', 100, 10)
+        // console.log(b1);
+        // console.log(b1.stop())
+
+
+        /*
+        |--------------------------------------
+        |  组合继承：原型+构造函数
+        |--------------------------------------
+        */
+
+        // function Person(name, age) {
+        //     this.name = name
+        //     this.age = age
+        //     this.setAge = function () {}
+        // }
+        // Person.prototype.setAge = function () {
+        //     console.log(111)
+        // }
+        // var p1 = new Person('p1', 10);
+
+        // function Student(name, age, grade) {
+        //     Person.call(this, name, age)
+        //     this.grade = grade
+        //     this.setScore = function () {}
+        // }
+        // Student.prototype = new Person()
+        // Student.prototype.constructor = Student
+        // Student.prototype.sayHi = function () {}
+
+        // var s1 = new Student('S1', 11, 2)
+        // var s2 = new Student('S2', 13, 4)
+        // console.log(s1, s2)
+        // console.log(s1.constructor)
+        // console.log(p1.constructor)
+
+        /*
+        |--------------------------------------
+        |  组合继承优化1
+        |--------------------------------------
+        */
+        // function Person(name, age) {
+        //     this.name = name
+        //     this.age = age
+        //     this.setAge = function () {}
+        // }
+        // Person.prototype.setAge = function () {
+        //     console.log(111)
+        // }
+        // var p1 = new Person('p1', 10);
+
+        // function Student(name, age, grade) {
+        //     Person.call(this, name, age)
+        //     this.grade = grade
+        //     this.setScore = function () {}
+        // }
+        // Student.prototype = Person.prototype
+        // Student.prototype.sayHi = function () {}
+
+        // var s1 = new Student('S1', 11, 2)
+        // console.log(s1)
+        // console.log(s1.constructor)
+        // console.log(p1.constructor)
+
+        /*
+        |--------------------------------------
+        |  组合继承优化2
+        |--------------------------------------
+        */
+        function Person(name, age) {
+            this.name = name
+            this.age = age
+            this.setAge = function () {}
+        }
+        Person.prototype.setAge = function () {
+            console.log(111)
+        }
+        var p1 = new Person('p1', 10);
+
+        function Student(name, age, grade) {
+            Person.call(this, name, age)
+            this.grade = grade
+            this.setScore = function () {}
+        }
+        Student.prototype = Object.create(Person.prototype)
+        Student.prototype.constructor = Student
+        Student.prototype.sayHi = function () {}
+
+        var s1 = new Student('S1', 11, 2)
+        console.log(s1)
+        console.log(s1.constructor)
+        console.log(p1.constructor)
+    </script>
+</body>
+
+</html>
