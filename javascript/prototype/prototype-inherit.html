@@ -152,8 +152,41 @@
 
         var s1 = new Student('S1', 11, 2)
         console.log(s1)
+        console.log(s1.__proto__)
         console.log(s1.constructor)
         console.log(p1.constructor)
+
+        /*
+        |--------------------------------------
+        |  ES6 class
+        |--------------------------------------
+        */
+        class Animal {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            eat() {
+                console.log("父类的eat方法")
+                console.log(this.name, this.age)
+            }
+        }
+        let a1 = new Animal('lala', 23)
+        console.log(a1)
+
+        class Dog extends Animal {
+            constructor(name, age, price) {
+                super(name, age)
+                this.price = price
+            }
+            eat() {
+                console.log('子类的eat方法')
+                console.log(this.name, this.age, this.price)
+            }
+        }
+        let d1 = new Dog('oo', 12, 10000)
+        console.log(d1)
+        d1.eat();
     </script>
 </body>
 
