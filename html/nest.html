@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>html元素嵌套</title>
+</head>
+
+<body>
+  <!-- 合法：等同于a继承body的content model -->
+  <a href="#">
+    <div>我是"a"=>"div"</div>
+  </a>
+  <!-- 下面段不合法：浏览器会拆分猜测解析 -->
+  <p><a href="#">
+      <div>我是"p"=>"a"=>"div"</div>
+    </a></p>
+</body>
+
+</html>
