@@ -1,0 +1,32 @@
+.menu {
+    width: calc(4 * 200px);
+}
+
+.menu_link {
+    color: blue;
+    width: 200px;
+}
+
+.notice-clear {
+        background: red
+}
+
+.b-1 {
+        width:1px;
+    }
+
+.b-2 {
+        width:2px;
+    }
+
+.b-3 {
+        width:3px;
+    }
+
+.b-4 {
+        width:4px;
+    }
+
+.b-5 {
+        width:5px;
+    }

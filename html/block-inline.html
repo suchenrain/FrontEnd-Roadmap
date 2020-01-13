@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>block/inline/inline-block元素</title>
+</head>
+<style media="screen">
+  html * {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<body>
+  <style media="screen">
+    .parent {
+      width: 300px;
+      height: 150px;
+      background-color: #ccc;
+      padding: 10px;
+      margin-top: 5px;
+      border: 10px solid transparent;
+    }
+
+    .son {
+      width: 100%;
+      border: 10px solid #000;
+      background: pink;
+      margin-left: 10px;
+      margin-right: 15px;
+      margin-top: 15px;
+    }
+  </style>
+  <h2>block元素</h2>
+  <div class="parent">
+    <div class="son">我是块级div(block)</div>
+  </div>
+  <h2>内联元素</h2>
+  <span>我是内联元素span</span><strong>strong元素</strong>
+</body>
+
+</html>

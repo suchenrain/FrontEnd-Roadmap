@@ -1,0 +1,6 @@
+@import './2-import-module.css';
+
+.box {
+    box-shadow: 0 0 3px #ccc;
+    display: flex;
+}

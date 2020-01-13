@@ -1,0 +1,13 @@
+:root {
+    --marin-color: red
+}
+
+a {
+    color: var(--marin-color);
+
+}
+
+.danger {
+  color: white;
+  background-color: red;
+}

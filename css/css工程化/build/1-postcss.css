@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    -webkit-box-shadow: 0 0 3px rgba(red, green, blue, .5);
+            box-shadow: 0 0 3px rgba(red, green, blue, .5);
+}
