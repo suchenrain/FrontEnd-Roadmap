@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+    <style>
+        .container {
+            width: 400px;
+            background: pink;
+            /* margin: 30px; */
+        }
+
+        .p1 {
+            background: blueviolet;
+            float: left;
+            width: 200px;
+            height: 50px;
+        }
+
+        .p2 {
+            margin-left: 200px;
+            word-break: break-all;
+        }
+
+        .container2 {
+            /* overflow: hidden; */
+        }
+
+        /* IE8不兼容 */
+        .container2::after {
+            content: 'test';
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+
+        /* IE8兼容 */
+        .container2:after {
+            content: 'test';
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="p1">
+            float
+        </span>
+        <div class="p2">
+            jfasdjfasld;fjasd;jflasdjflasdjflsajfdwen文字范德萨放假哦啊三等奖佛as点击发送东风街asjfasdjfasld;fjasd;jflasdjflasdjflsajfdwen文字范德萨放假哦啊三等奖佛as点击发送东风街asjfasdjfasld;fjasd;jflasdjflasdjflsajfdwen文字范德萨放假哦啊三等奖佛as点击发送东风街asjfasdjfasld;fjasd;jflasdjflasdjflsajfdwen文字范德萨放假哦啊三等奖佛as点击发送东风街as
+        </div>
+    </div>
+    <br>
+
+    <div class="container container2">
+        <span>几个字</span>
+        <span class="p1">
+            float
+        </span>
+        <span class="p1">float</span>
+    </div>
+
+    <div style="background:cornflowerblue;height:200px;width: 400px;"></div>
+
+</body>
+
+</html>

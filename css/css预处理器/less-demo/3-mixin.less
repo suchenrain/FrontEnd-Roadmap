@@ -1,0 +1,47 @@
+@fontSize: 12px;
+@bgColor: red;
+
+.block(@fontSize) {
+    font-size: @fontSize;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+// 这段样式不会出现在编译后得文件中
+.test() {
+    color: red;
+}
+
+.test1 {
+    .test();
+    font-size: @fontSize;
+}
+
+.test2 {
+    .test();
+    font-size: @fontSize+2px;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.wrapper {
+    background: lighten(@bgColor, 40%);
+
+    .nav {
+        .block(@fontSize);
+    }
+
+    .content {
+        .block(@fontSize+2px);
+
+        &:hover {
+            background: @bgColor;
+        }
+    }
+}

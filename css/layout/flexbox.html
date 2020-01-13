@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox弹性盒子</title>
+    <style>
+        .container {
+            display: flex;
+            width: 800px;
+            height: 300px;
+            border: 2px solid pink;
+        }
+
+        .flex {
+            margin: 5px;
+            background: pink;
+            flex: 1;
+        }
+
+        .container2 {
+            display: flex;
+            margin-top: 20px;
+            width: 800px;
+            height: 300px;
+        }
+
+        .left {
+            width: 300px;
+            background: pink;
+        }
+
+        .right {
+            flex: 1;
+            background: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex" style="width:100px;flex:none;">flex</div>
+        <div class="flex" style="flex:2">flex</div>
+        <div class="flex">flex</div>
+    </div>
+
+    <div class="container2">
+        <div class="left">
+            left
+        </div>
+        <div class="right">
+            right
+        </div>
+    </div>
+</body>
+
+</html>
