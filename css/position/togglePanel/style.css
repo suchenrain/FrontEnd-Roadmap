@@ -1,0 +1,30 @@
+label[for="toggle"] {
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    top: -200px;
+}
+
+aside {
+    width: 340px;
+    height: 98%;
+    padding: 10px 1%;
+    background-color: bisque;
+
+    position: fixed;
+    top: 0;
+    right: -370px;
+    transition: all 1s;
+}
+
+input[type="checkbox"]:checked+aside {
+    right: 0px;
+}
