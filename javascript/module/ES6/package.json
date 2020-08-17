@@ -7,6 +7,6 @@
     "browserify": "^16.5.0"
   },
   "dependencies": {
-    "jquery": "^1.12.4"
+    "jquery": "^3.5.0"
   }
 }
